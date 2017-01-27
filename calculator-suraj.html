@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style type="text/css">
+		input[type="button"]{width: 40px;}
+	</style>
+</head>
+<script type="text/javascript">
+	/*Add Numbers*/
+	function addVal0(){
+		document.getElementById('showResult').value += "0";
+	}
+	function addVal1(){
+		document.getElementById('showResult').value += "1";
+	}
+	function addVal2(){
+		document.getElementById('showResult').value += "2";
+	}
+	function addVal3(){
+		document.getElementById('showResult').value += "3";
+	}
+	function addVal4(){
+		document.getElementById('showResult').value += "4";
+	}
+	function addVal5(){
+		document.getElementById('showResult').value += "5";
+	}
+	function addVal6(){
+		document.getElementById('showResult').value += "6";
+	}
+	function addVal7(){
+		document.getElementById('showResult').value += "7";
+	}
+	function addVal8(){
+		document.getElementById('showResult').value += "8";
+	}
+	function addVal9(){
+		document.getElementById('showResult').value += "9";
+	}
+	/*Add Operators*/
+	function addition(){
+		document.getElementById('showResult').value += "+";
+	}
+	function subtraction(){
+		document.getElementById('showResult').value += "-";
+	}
+	function multiplication(){
+		document.getElementById('showResult').value += "*";
+	}
+	function division(){
+		document.getElementById('showResult').value += "/";
+	}
+	/*Clear input*/
+	function clrVal(){
+		document.getElementById('showResult').value = "";
+	}
+	/*Show Result*/
+	function showResultVal(){
+		var storeVal = eval(document.getElementById('showResult').value);
+		//alert (storeVal);
+		document.getElementById('showResult').value = storeVal;
+	}
+</script>
+<body>
+<form name="calc">
+	<table cellspacing="0" cellpadding="5" border="1">
+		<tr>
+			<td colspan="4"><input name="display" id="showResult" type="text"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="0" id="val0" onClick="addVal0();"></td>
+			<td><input type="button" value="1" onClick="addVal1();"></td>
+			<td><input type="button" value="2" onClick="addVal2();"></td>
+			<td><input type="button" value="+" onClick="addition();"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="3" onClick="addVal3();"></td>
+			<td><input type="button" value="4" onClick="addVal4();"></td>
+			<td><input type="button" value="5" onClick="addVal5();"></td>
+			<td><input type="button" value="-" onClick="subtraction()"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="6" onClick="addVal6();"></td>
+			<td><input type="button" value="7" onClick="addVal7();"></td>
+			<td><input type="button" value="8" onClick="addVal8();"></td>
+			<td><input type="button" value="x" onClick="multiplication()"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="9" onClick="addVal9();"></td>
+			<td><input type="button" value="C" onClick="clrVal();"></td>
+			<td><input type="button" value="=" onClick="showResultVal();"></td>
+			<td><input type="button" value="/" onClick="division()"></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
